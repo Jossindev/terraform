@@ -1,11 +1,3 @@
-output "grafana_instance" {
-  value = aws_instance.grafana.public_ip
-}
-
-output "prometheus_instance" {
-  value = aws_instance.prometheus.private_ip
-}
-
 output "openvpn_instance" {
   value = aws_instance.openvpn.public_ip
 }
