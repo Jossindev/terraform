@@ -1,5 +1,5 @@
 # Security group for Grafana
-resource "aws_security_group" "grafana" {
+resource "aws_security_group" "nextcloud" {
   vpc_id = aws_vpc.main.id
 
   ingress {
@@ -17,30 +17,7 @@ resource "aws_security_group" "grafana" {
   }
 
   tags = {
-    Name = "Grafana-SG"
-  }
-}
-
-# Security group for Prometheus
-resource "aws_security_group" "prometheus" {
-  vpc_id = aws_vpc.main.id
-
-  ingress {
-    from_port   = 9090
-    to_port     = 9090
-    protocol    = "tcp"
-    cidr_blocks = ["10.0.1.0/24"] # Only accessible from Public Subnet
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  tags = {
-    Name = "Prometheus-SG"
+    Name = "NextCloud-SG"
   }
 }
 

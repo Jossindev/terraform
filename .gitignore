@@ -1,1 +1,5 @@
 /.idea/
+/solution/.terraform.lock.hcl
+/solution/.terraform/
+/solution/terraform.tfstate
+/solution/terraform.tfstate.backup
